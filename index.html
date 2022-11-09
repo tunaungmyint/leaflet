@@ -7,6 +7,13 @@
     <title>Pyin Oo Lwin</title>
     <link rel="stylesheet" href="./map/leaflet.css" />
     <script src="./map/leaflet.js"></script>
+
+    <!-- geocoder -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"
+    />
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
     <style>
       body {
         margin: 0;
@@ -49,6 +56,8 @@
             Hello. paragraph     
         </p>
         <img src='${imageUrl}' alt='food' width='100px' height='100px'/>
+        <h4>09123456789 </h4>
+        <i>nancy@gmail.com</i>
       `);
 
       var marker1 = L.marker([22.024028, 96.463823], {
@@ -81,6 +90,10 @@
         .bindPopup('သစ်တော')
         .openPopup()
         .addTo(map);
+
+      // geocoder
+
+      var geocoder = L.Control.geocoder().addTo(map);
     </script>
   </body>
 </html>
